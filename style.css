@@ -14,7 +14,7 @@ body{
   margin:0;
   font-family: "VT323", monospace;
   background:var(--cream);
-  background-image: url(C:\portfolio\background.png);
+  background-image: url(images/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   color:var(--deep);
