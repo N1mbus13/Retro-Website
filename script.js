@@ -52,3 +52,30 @@ document.querySelectorAll('.quick-btn').forEach(btn => {
     section.classList.add('section-highlight');
   });
 });
+
+// Theme Color Switcher with localStorage state management
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+  const updateToggleUI = (isDark) => {
+    const icon = themeToggle.querySelector('.mode-icon');
+    const text = themeToggle.querySelector('.mode-text');
+    if (icon) icon.textContent = isDark ? '🌙' : '⚡';
+    if (text) text.textContent = isDark ? 'DARK' : 'LIGHT';
+  };
+
+  themeToggle.addEventListener('click', () => {
+    document.documentElement.classList.toggle('dark-brutalist');
+    const isDark = document.documentElement.classList.contains('dark-brutalist');
+    localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    updateToggleUI(isDark);
+  });
+
+  // Apply saved preference on page load
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme === 'dark') {
+    document.documentElement.classList.add('dark-brutalist');
+    updateToggleUI(true);
+  } else {
+    updateToggleUI(false);
+  }
+}

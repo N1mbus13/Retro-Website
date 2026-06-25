@@ -3,25 +3,50 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Portfolio</title>
+  <title>Sri Parjanya | Designer & Developer Portfolio</title>
+  <meta name="description" content="Portfolio of Sri Parjanya - Designer and Developer. Showcasing projects, skills, and retro web design." />
 
-  <!-- Fonts -->
-  <link href="https://fonts.google.com/specimen/Roboto+Mono?categoryFilters=Appearance:%2FMonospace%2FMonospace" rel="stylesheet">
+  <!-- Google Fonts for Neo-Brutalism -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Space+Grotesk:wght@400;500;700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&family=Audiowide&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<!-- <img src="headphones.png" class="side-decor-left">
-<img src="gameboy.png" class="side-decor-right"> -->
+  <!-- Top Scrolling Marquee Ticker -->
+  <div class="marquee-container" aria-hidden="true">
+    <div class="marquee-content">
+      <span>✦ SRI PARJANYA ✦ DESIGNER & DEVELOPER ✦ RETRO PORTFOLIO ✦ SETUP RUNNING SMOOTH ✦ MUSIC ON ✦ CHIP TUNE VIBES ✦ </span>
+      <span>✦ SRI PARJANYA ✦ DESIGNER & DEVELOPER ✦ RETRO PORTFOLIO ✦ SETUP RUNNING SMOOTH ✦ MUSIC ON ✦ CHIP TUNE VIBES ✦ </span>
+    </div>
+  </div>
 
+  <!-- Sticky Navbar -->
+  <nav class="nav">
+    <div class="nav-left">
+      <a href="#" class="brand-link">SRI_PARJANYA.EXE</a>
+    </div>
+    <div class="nav-center">
+      <a class="nav-link" href="#work">PROJECTS</a>
+      <a class="nav-link" href="#hobbies">HOBBIES</a>
+      <a class="nav-link" href="#about">SKILLS</a>
+      <a class="nav-link" href="#contact">CONTACT</a>
+    </div>
+    <div class="nav-right">
+      <button id="theme-toggle" class="theme-toggle-btn ripple-target" aria-label="Toggle Theme">
+        <span class="mode-icon">⚡</span> <span class="mode-text">TOGGLE THEME</span>
+      </button>
+    </div>
+  </nav>
 
   <!-- main hero -->
   <main class="hero">
     <div class="hero-inner">
 
       <div class="hero-text">
-        <p class="eyebrow">I'm Sri Parjanya</p>
+        <p class="eyebrow">HI, I'M SRI PARJANYA</p>
 
         <h1 class="title">
           <span class="title-fill">DESIGNER</span>
@@ -32,87 +57,139 @@
         </h2>
 
         <p class="lede">
-          Tech-curious, always tweaking my setup to make things smoother and faster.
+          Tech-curious developer, always tweaking my setup to make things smoother, faster, and beautiful.
           I love simple, clean designs — in code, UI, and life.
-          Music keeps me grounded, from pop to Radiohead nights.
+          Music keeps me grounded, from classic pop to late-night Radiohead sessions.
         </p>
 
         <div class="cta-row">
-          <a class="retro-btn quick-btn hover-pop ripple-target" href="#work">Check my latest work</a>
-          <a class="more-link quick-btn" href="#about">MORE ABOUT ME</a>
-          <a class="retro-btn quick-btn hover-pop ripple-target" href="#contact">Get in touch</a>
+          <a class="retro-btn quick-btn hover-pop ripple-target" href="#work">Check my work ➔</a>
+          <a class="retro-btn quick-btn hover-pop ripple-target alt-btn" href="#about">More about me</a>
+          <a class="retro-btn quick-btn hover-pop ripple-target contact-btn" href="#contact">Get in touch ✉</a>
         </div>
-
-
       </div>
 
-      <div class="hero-image hero-img">
-        <!-- path to your uploaded image file (local path) -->
-        <img src="potrait.jpg" alt="portrait">
-        <div class="hero-note">NICE TO MEET YOU!<br>HOW CAN I HELP?</div>
+      <!-- Hero image wrapped in an OS-Style window -->
+      <div class="window hero-window hover-pop">
+        <div class="window-header">
+          <div class="window-title">portrait.jpg</div>
+          <div class="window-controls">
+            <span class="win-btn win-min"></span>
+            <span class="win-btn win-max"></span>
+            <span class="win-btn win-close"></span>
+          </div>
+        </div>
+        <div class="window-content hero-img">
+          <img src="potrait.jpg" alt="portrait picture of Sri Parjanya">
+          <div class="sticker-badge badge-top-left">ONLINE</div>
+          <div class="sticker-badge badge-bottom-right">2026</div>
+          <div class="hero-note">NICE TO MEET YOU!<br>HOW CAN I HELP?</div>
+        </div>
       </div>
 
     </div>
   </main>
 
-  <!-- quick link blocks -->
+  <!-- Quick link blocks (Sticker Row) -->
   <section class="quick" aria-label="quick links">
-    <a class="quick-btn ripple-target" href="#work">Projects →</a>
-    <a class="quick-btn ripple-target" href="#hobbies">Hobbies →</a>
-    <a class="quick-btn ripple-target" href="#about">Skills →</a>
-    <a class="quick-btn ripple-target" href="#contact">Contact →</a>
+    <a class="quick-btn ripple-target hover-pop card-green" href="#work">Projects ➔</a>
+    <a class="quick-btn ripple-target hover-pop card-pink" href="#hobbies">Hobbies ➔</a>
+    <a class="quick-btn ripple-target hover-pop card-yellow" href="#about">Skills ➔</a>
+    <a class="quick-btn ripple-target hover-pop card-cyan" href="#contact">Contact ➔</a>
   </section>
 
   <!-- Projects (compact grid) -->
   <section id="work" class="section fade-in">
-    <h3>Projects</h3>
+    <h3>PROJECTS</h3>
 
     <div class="grid">
-      <article class="card hover-pop">
-        <div class="img-bar"></div>
-        <h4>Time Table Genarator</h4>
-        <p class="small">Create and download time tables</p>
-        <a class="btn click-press ripple-target" href="https://n1mbus13.github.io/TimeTable/">View project</a>
+      <article class="card hover-pop card-cyan">
+        <div class="card-header">
+          <span class="card-dots">🟢 🟡 🔴</span>
+          <span class="card-tag">WEB APP</span>
+        </div>
+        <div class="card-content">
+          <div class="img-bar"></div>
+          <h4>Time Table Generator</h4>
+          <p class="small">Create, customize, and download structured school or college timetables instantly.</p>
+          <div class="card-tags">
+            <span class="tag">HTML5</span>
+            <span class="tag">CSS3</span>
+            <span class="tag">JavaScript</span>
+          </div>
+          <a class="btn click-press ripple-target" href="https://n1mbus13.github.io/TimeTable/" target="_blank" rel="noopener noreferrer">View Project ➔</a>
+        </div>
       </article>
       
-      <article class="card hover-pop">
-        <div class="img-bar"></div>
-        <h4>Portfolio site</h4>
-        <p class="small">portfolio website with a retro style</p>
-        <a class="btn click-press ripple-target" href="https://n1mbus13.github.io/Retro-Website/">View project</a>
+      <article class="card hover-pop card-yellow">
+        <div class="card-header">
+          <span class="card-dots">🟢 🟡 🔴</span>
+          <span class="card-tag">WEBSITE</span>
+        </div>
+        <div class="card-content">
+          <div class="img-bar"></div>
+          <h4>Portfolio Site</h4>
+          <p class="small">My personal portfolio website designed with a custom high-impact Neo-Brutalist retro aesthetic.</p>
+          <div class="card-tags">
+            <span class="tag">Neo-Brutalism</span>
+            <span class="tag">Vanilla CSS</span>
+            <span class="tag">Scroll FX</span>
+          </div>
+          <a class="btn click-press ripple-target" href="https://n1mbus13.github.io/Retro-Website/" target="_blank" rel="noopener noreferrer">View Project ➔</a>
+        </div>
       </article>
     </div>
   </section>
 
   <!-- Hobbies -->
-
-   <section id="hobbies" class="section hobbies-section fade-in">
-  <h3>Hobbies</h3>
-  <ul>
-    <li>Gaming</li>
-    <li>Watching Movies</li>
-    <li>Listening to Music</li>
-  </ul>
-</section>
-
-
-
+  <section id="hobbies" class="section hobbies-section fade-in">
+    <h3>HOBBIES</h3>
+    <div class="hobbies-grid">
+      <div class="hobby-card hover-pop card-yellow">
+        <span class="hobby-icon">🎮</span>
+        <h4 class="hobby-title">Gaming</h4>
+        <p class="hobby-desc">Immersing myself in RPGs, indie platformers, and classic arcade speedruns.</p>
+      </div>
+      <div class="hobby-card hover-pop card-pink">
+        <span class="hobby-icon">🍿</span>
+        <h4 class="hobby-title">Movies</h4>
+        <p class="hobby-desc">Sci-fi adventures, mind-bending psychological thrillers, and vintage animation.</p>
+      </div>
+      <div class="hobby-card hover-pop card-purple">
+        <span class="hobby-icon">🎧</span>
+        <h4 class="hobby-title">Music</h4>
+        <p class="hobby-desc">Powering through coding sessions with upbeat pop or chill Radiohead albums.</p>
+      </div>
+    </div>
+  </section>
 
   <!-- About / Skills / Contact compressed -->
   <div class="skills-contact-container section fade-in">
-  <section id="about" class="skills-section">
-    <h4>Skills</h4>
-    <p class="skills">
-      HTML • CSS • JS • JAVA • OS<br><br>
-      Design systems -> Figma • Canva</p>
-  </section>
+    <section id="about" class="skills-section">
+      <h4>TECH STACK & SKILLS</h4>
+      <div class="skills-grid">
+        <span class="skill-badge tag-html">HTML5</span>
+        <span class="skill-badge tag-css">CSS3</span>
+        <span class="skill-badge tag-js">JavaScript</span>
+        <span class="skill-badge tag-java">Java</span>
+        <span class="skill-badge tag-os">Operating Systems</span>
+        <span class="skill-badge tag-figma">Figma</span>
+        <span class="skill-badge tag-canva">Canva</span>
+      </div>
+    </section>
 
-  <section id="contact" class="contact-section">
-    <h3>Contact</h3>
-    <p>Email: <a href="mailto:sriparjanyasg@gmail.com">sriparjanyasg@gmail.com</a></p>
-    <p>Socials: <a href="https://www.linkedin.com/in/s-g-sri-parjanya-bca-cc-ombr-970947396/">LinkedIn</a> • <a href="https://github.com/N1mbus13">GitHub</a></p>
-  </section>
-</div>
+    <section id="contact" class="contact-section">
+      <h3>GET IN TOUCH</h3>
+      <div class="contact-card card-orange">
+        <p class="contact-intro">Let's build something awesome together! Reach out via email or connect on socials:</p>
+        <div class="contact-links">
+          <a href="mailto:sriparjanyasg@gmail.com" class="btn click-press ripple-target mail-btn">Email Me ➔</a>
+          <a href="https://www.linkedin.com/in/s-g-sri-parjanya-bca-cc-ombr-970947396/" target="_blank" rel="noopener noreferrer" class="btn click-press ripple-target linkedin-btn">LinkedIn ➔</a>
+          <a href="https://github.com/N1mbus13" target="_blank" rel="noopener noreferrer" class="btn click-press ripple-target github-btn">GitHub ➔</a>
+        </div>
+      </div>
+    </section>
+  </div>
 
   <script src="script.js"></script>
 </body>
